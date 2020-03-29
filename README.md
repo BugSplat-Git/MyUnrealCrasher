@@ -1,6 +1,4 @@
-# MyUnrealCrasher
-
-Developed with Unreal Engine 4
+[![BugSplat](https://s3.amazonaws.com/bugsplat-public/npm/header.png)](https://www.bugsplat.com)
 
 ## Prerequisites
 * [Unreal Engine 4](https://www.unrealengine.com/download)
@@ -17,11 +15,11 @@ Developed with Unreal Engine 4
     * Packaging > Include Crash Reporter
     * Project > Include Debug Files
 7. Package the project and note what directory you choose (File > Package Project)
-8. Create or edit the contents of the file found in `{{output_directory}}/Engine/Programs/CrashReportClient/Config/NoRedist/DefaultEngine.ini`. Make sure to replace {database} with the value of your BugSplat database. The following example will post a crash with the application MyUnrealCrasher and version 1.0:
+8. Create or edit the contents of the file found in `{{output_directory}}/Engine/Programs/CrashReportClient/Config/NoRedist/DefaultEngine.ini`. Make sure to replace `{database}` with the value of your BugSplat database. The following example will post a crash with the application MyUnrealCrasher and version 1.0:
 ```
 [CrashReportClient]
 CrashReportClientVersion=1.0
 DataRouterUrl="https://{database}.bugsplat.com/post/ue4/MyUnrealCrasher/1.0"
 ```
-9. Use SendPdbs to post all the .dll, .exe and .pdb files to BugSplat. Be sure to match the database, application and version values from the previous step.
+9. Use [SendPdbs](https://www.bugsplat.com/docs/faq/sendpdbs/) to post all the .dll, .exe and .pdb files to BugSplat. Be sure to match the database, application and version values from the previous step.
 10. Open the MyUnrealCrasher.exe and submit the crash when prompted.
