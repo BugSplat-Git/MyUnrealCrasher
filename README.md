@@ -15,7 +15,7 @@
     * Project > Include Debug Files
 6. Package the project and note what directory you choose (File > Package Project)
     * If you get an error packaging your project, ensure that UE4 is properly connected to Visual Studio (Edit > Editor Preferences > Source Code > Ensure the correct version of Visual Studio is selected in the dropdown)
-7. Create or edit the contents of the file found in `{{output_directory}}/Engine/Programs/CrashReportClient/Config/NoRedist/DefaultEngine.ini`. Make sure to replace `{database}` with the value of your BugSplat database. The following example will post a crash with the application MyUnrealCrasher and version 1.0:
+7. Create a DefaultEngine.ini file in the following folder `{{output_directory}}/Engine/Programs/CrashReportClient/Config/NoRedist/DefaultEngine.ini`. Make sure to replace `{database}` with the value of your BugSplat database. The following example will post a crash with the application MyUnrealCrasher and version 1.0:
 ```
 [CrashReportClient]
 CrashReportClientVersion=1.0
